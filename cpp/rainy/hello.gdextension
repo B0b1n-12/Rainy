@@ -1,0 +1,4 @@
+
+[configuration]
+entry_symbol = "godot_gdnative_init"
+libraries = ["res://bin/hello.windows.template_debug.x86_64.dll"]

@@ -1,0 +1,10 @@
+
+import os
+
+godot_headers_path = "../godot-cpp"
+env = Environment()
+env.Append(CPPPATH=[godot_headers_path + "/include", godot_headers_path + "/include/core", godot_headers_path + "/include/gen"])
+env.Append(LIBPATH=["../godot-cpp/bin"])
+env.Append(LIBS=["godot-cpp.windows.debug.x86_64"])  # uprav dle platformy
+env.Append(CCFLAGS=["-std=c++17"])
+env.SharedLibrary("hello", ["hello.cpp"])
